@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/UniCoderGroup/nodeliketty#readme",
   "devDependencies": {
-    "typescript": "4.5.4"
+    "typescript": "4.5.5"
   },
   "dependencies": {
   }
