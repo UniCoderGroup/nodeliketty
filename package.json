@@ -1,6 +1,6 @@
 {
   "name": "nodeliketty",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A definition of tty that works like Nodejs WriteStream.",
   "main": "build/index.js",
   "types": "build/index.d.ts",

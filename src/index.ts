@@ -1,6 +1,6 @@
 import { Direction } from "node:tty";
 export { Direction };
-export interface NodeLikeTty {
+export default interface NodeLikeTty {
   write(buffer: Uint8Array | string): boolean;
   on(event: "resize", listener: () => void): this;
   /**
