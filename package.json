@@ -1,0 +1,29 @@
+{
+  "name": "nodeliketty",
+  "version": "1.0.0",
+  "description": "A definition of tty that works like Nodejs WriteStream.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniCoderGroup/nodeliketty.git"
+  },
+  "keywords": [
+    "tty"
+  ],
+  "author": "_Kerman@UniCoder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UniCoderGroup/nodeliketty/issues"
+  },
+  "homepage": "https://github.com/UniCoderGroup/nodeliketty#readme",
+  "devDependencies": {
+    "typescript": "4.5.4"
+  },
+  "dependencies": {
+  }
+}
