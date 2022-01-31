@@ -1,7 +1,26 @@
 import { Direction } from "node:tty";
 export { Direction };
 export default interface NodeLikeTty {
+  /**
+   * A `number` specifying the number of columns the TTY currently has. This property
+   * is updated whenever the `'resize'` event is emitted.
+   * @since v0.7.7
+   */
+  columns: number;
+  /**
+   * A `number` specifying the number of rows the TTY currently has. This property
+   * is updated whenever the `'resize'` event is emitted.
+   * @since v0.7.7
+   */
+  rows: number;
+  /**
+   * Write to tty without nextline.
+   */
   write(buffer: Uint8Array | string): boolean;
+
+  /**
+   * `listener` will be called when tty resizes.
+   */
   on(event: "resize", listener: () => void): this;
   /**
    * `writeStream.clearLine()` clears the current line of this `WriteStream` in a
@@ -51,16 +70,4 @@ export default interface NodeLikeTty {
    * @param [env=process.env] An object containing the environment variables to check. This enables simulating the usage of a specific terminal.
    */
   getColorDepth(): number;
-  /**
-   * A `number` specifying the number of columns the TTY currently has. This property
-   * is updated whenever the `'resize'` event is emitted.
-   * @since v0.7.7
-   */
-  columns: number;
-  /**
-   * A `number` specifying the number of rows the TTY currently has. This property
-   * is updated whenever the `'resize'` event is emitted.
-   * @since v0.7.7
-   */
-  rows: number;
 }
